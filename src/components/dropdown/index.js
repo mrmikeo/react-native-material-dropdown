@@ -188,13 +188,7 @@ export default class Dropdown extends PureComponent {
     };
   }
 
-  //UNSAFE_componentWillReceiveProps({ value }) {
-  //  if (value !== this.props.value) {
-  //    this.setState({ value });
-  //  }
-  //}
-
-  componentDidReceiveProps({ value }) {
+  UNSAFE_componentWillReceiveProps({ value }) {
     if (value !== this.props.value) {
       this.setState({ value });
     }
@@ -204,11 +198,7 @@ export default class Dropdown extends PureComponent {
     this.mounted = true;
   }
 
-  //UNSAFE_componentWillUnmount() {
-  //  this.mounted = false;
-  //}
-
-  componentDidUnmount() {
+  UNSAFE_componentWillUnmount() {
     this.mounted = false;
   }
 
