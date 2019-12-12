@@ -188,7 +188,7 @@ export default class Dropdown extends PureComponent {
     };
   }
 
-  componentWillReceiveProps({ value }) {
+  UNSAFE_componentWillReceiveProps({ value }) {
     if (value !== this.props.value) {
       this.setState({ value });
     }
@@ -198,7 +198,7 @@ export default class Dropdown extends PureComponent {
     this.mounted = true;
   }
 
-  componentWillUnmount() {
+  UNSAFE_componentWillUnmount() {
     this.mounted = false;
   }
 
